@@ -15,7 +15,7 @@ jobs:
     - name: Set up JDK
       uses: actions/setup-java@v4
       with:
-        ditribution: 'terumin'
+        distribution: 'temurin'
         java-version: '21'
 
     - name: Run
