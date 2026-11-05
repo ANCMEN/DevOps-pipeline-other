@@ -1,0 +1,24 @@
+name: CI Pipeline
+
+on:
+  push:
+    branches: [main]
+
+jobs: 
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@5
+  
+    - name: Set up JDK
+      uses: actions/setup-java@v4
+      with:
+        ditribution: 'terumin'
+        java-version: '21'
+
+    - name: Run
+      run: java TicketGeneratorApp.java
+
+
