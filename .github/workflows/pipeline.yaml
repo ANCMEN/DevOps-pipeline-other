@@ -19,6 +19,10 @@ jobs:
         java-version: '21'
 
     - name: Run
-      run: java TicketGeneratorApp.java
+      run: |
+      java TicketGeneratorApp.java &
+      sleep 5
+      curl -f http://localhost:8080
+      kill %1
 
 
