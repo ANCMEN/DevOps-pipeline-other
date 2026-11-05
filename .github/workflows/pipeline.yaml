@@ -20,9 +20,9 @@ jobs:
 
     - name: Run
       run: |
-      java TicketGeneratorApp.java &
-      sleep 5
-      curl -f http://localhost:8080
-      kill %1
+        java TicketGeneratorApp.java &
+        sleep 5
+        curl -f http://localhost:8080
+        kill %1
 
 
